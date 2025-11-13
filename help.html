@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkyCast | Help Center</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="branding">
+          <span class="logo" aria-hidden="true">☀️</span>
+          <h1>SkyCast</h1>
+        </div>
+        <button
+          type="button"
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Toggle color theme"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+          <span class="theme-toggle__label">Dark mode</span>
+        </button>
+      </div>
+      <p class="tagline">Get answers and make the most of SkyCast</p>
+      <nav class="app-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Forecast</a>
+        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="signup.html">Sign Up</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link current" href="help.html" aria-current="page">Help</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="card info-card">
+        <h2>Quick Start</h2>
+        <p class="page-intro">
+          Type any city, town, or landmark into the forecast search box and press enter to see the latest conditions and 5-day outlook.
+        </p>
+        <ul class="list">
+          <li>Use full place names for the most accurate results.</li>
+          <li>Tap a forecast card to refresh the data while it is open.</li>
+          <li>Switch between light and dark themes via the toggle in the header.</li>
+        </ul>
+      </section>
+
+      <section class="card info-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>How do I sign in?</h3>
+            <p>
+              Visit the <a href="login.html">login page</a> and enter the shared beta credentials listed in the product brief. Successful sign-ins are stored locally in your browser as JSON so you stay signed in during this session.
+            </p>
+          </article>
+          <article class="faq-item">
+            <h3>Where is my data stored?</h3>
+            <p>
+              Login sessions are kept in your browser storage only. Forecast searches are sent directly from your device to the Open-Meteo API and are never logged by SkyCast.
+            </p>
+          </article>
+          <article class="faq-item">
+            <h3>Why am I not seeing results for some towns?</h3>
+            <p>
+              Smaller towns may not be included in the global database yet. Try the nearest major city or use the name of a nearby landmark.
+            </p>
+          </article>
+          <article class="faq-item">
+            <h3>Can I report an issue?</h3>
+            <p>
+              Absolutely. Send an email to <a href="mailto:feedback@skycast.app">feedback@skycast.app</a> with the location you searched and what you expected to see.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Data by
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">
+          Open-Meteo
+        </a>.
+        Built without frameworks.
+      </p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+  </body>
+</html>
+
+

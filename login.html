@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkyCast | Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="branding">
+          <span class="logo" aria-hidden="true">☀️</span>
+          <h1>SkyCast</h1>
+        </div>
+        <button
+          type="button"
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Toggle color theme"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+          <span class="theme-toggle__label">Dark mode</span>
+        </button>
+      </div>
+      <p class="tagline">Quick forecasts at your fingertips</p>
+      <nav class="app-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Forecast</a>
+        <a class="nav-link current" href="login.html" aria-current="page">Login</a>
+        <a class="nav-link" href="signup.html">Sign Up</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="help.html">Help</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="card form-card login-card">
+        <div class="badge">Beta access</div>
+        <h2>Sign in to SkyCast</h2>
+        <p class="page-intro">
+          Use the shared beta credentials to explore personalized weather dashboards and save your favorite locations.
+        </p>
+
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              required
+              autocomplete="username"
+              placeholder="Enter your username"
+            >
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              autocomplete="current-password"
+              placeholder="Enter your password"
+            >
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+        <p id="login-message" role="status" aria-live="polite"></p>
+
+        <div class="form-footer">
+          <span>New here? <a href="signup.html">Create an account</a> in seconds.</span>
+          <span>Need help? Visit the <a href="help.html">help center</a>.</span>
+          <span class="muted">Submitted login sessions are stored locally in your browser for privacy.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Data by
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">
+          Open-Meteo
+        </a>.
+        Built without frameworks.
+      </p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+    <script src="login.js" defer></script>
+  </body>
+</html>
+
+

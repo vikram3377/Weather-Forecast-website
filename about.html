@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkyCast | About</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="branding">
+          <span class="logo" aria-hidden="true">☀️</span>
+          <h1>SkyCast</h1>
+        </div>
+        <button
+          type="button"
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Toggle color theme"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+          <span class="theme-toggle__label">Dark mode</span>
+        </button>
+      </div>
+      <p class="tagline">Learn what powers the SkyCast experience</p>
+      <nav class="app-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Forecast</a>
+        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="signup.html">Sign Up</a>
+        <a class="nav-link current" href="about.html" aria-current="page">About</a>
+        <a class="nav-link" href="help.html">Help</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="card info-card">
+        <h2>Our Mission</h2>
+        <p class="page-intro">
+          SkyCast delivers precise, hyper-local forecasts in a clean interface that respects your attention and adapts to any device.
+        </p>
+        <p>
+          We combine modern browser capabilities with community-backed weather data to surface the details that matter: current conditions, reliable trends, and quick comparisons at a glance.
+        </p>
+      </section>
+
+      <section class="card info-card">
+        <h2>How It Works</h2>
+        <p>
+          SkyCast uses the <strong>Open-Meteo</strong> API suite for both global geocoding and 7-day weather forecasts. We fetch and render data directly in your browser—no servers or third-party trackers in between.
+        </p>
+        <ul class="list">
+          <li>
+            <strong>Geocoding:</strong> Searches are resolved to precise coordinates via the Open-Meteo geocoding API.
+          </li>
+          <li>
+            <strong>Forecasts:</strong> Live current conditions and multi-day forecasts are pulled on demand and cached in memory.
+          </li>
+          <li>
+            <strong>Privacy-first:</strong> Your queries never leave your device beyond the direct API call to Open-Meteo.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card info-card">
+        <h2>Technology Stack</h2>
+        <p>
+          Built without frameworks, SkyCast relies on platform-native tools for performance and reliability.
+        </p>
+        <ul class="list">
+          <li>HTML for semantic structure and accessibility.</li>
+          <li>Modern CSS with responsive layout, fluid typography, and dual light/dark themes.</li>
+          <li>Vanilla JavaScript to orchestrate data fetching, state management, and user interactions.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Data by
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">
+          Open-Meteo
+        </a>.
+        Built without frameworks.
+      </p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+  </body>
+</html>
+
+

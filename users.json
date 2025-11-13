@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "username": "demo",
+      "password": "skycast123",
+      "name": "SkyCast Demo User",
+      "role": "beta-tester"
+    },
+    {
+      "username": "meteorologist",
+      "password": "forecast!",
+      "name": "Avery Storm",
+      "role": "meteorologist"
+    }
+  ]
+}
+

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkyCast | Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="branding">
+          <span class="logo" aria-hidden="true">☀️</span>
+          <h1>SkyCast</h1>
+        </div>
+        <button
+          type="button"
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Toggle color theme"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+          <span class="theme-toggle__label">Dark mode</span>
+        </button>
+      </div>
+      <p class="tagline">Create an account to personalize your forecasts</p>
+      <nav class="app-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Forecast</a>
+        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link current" href="signup.html" aria-current="page">Sign Up</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="help.html">Help</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="card form-card signup-card">
+        <div class="badge">New feature</div>
+        <h2>Create your SkyCast account</h2>
+        <p class="page-intro">
+          Complete the form below to add a new account. Accounts are saved to an internal JSON store and can be synced to the bundled <code>users.json</code> file.
+        </p>
+
+        <form id="signup-form" novalidate>
+          <div class="form-group">
+            <label for="full-name">Full name</label>
+            <input
+              id="full-name"
+              name="fullName"
+              type="text"
+              required
+              placeholder="Avery Storm"
+              autocomplete="name"
+            >
+          </div>
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input
+              id="signup-username"
+              name="username"
+              type="text"
+              required
+              minlength="3"
+              placeholder="Choose a unique username"
+              autocomplete="username"
+            >
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input
+              id="signup-password"
+              name="password"
+              type="password"
+              required
+              minlength="6"
+              placeholder="Use at least 6 characters"
+              autocomplete="new-password"
+            >
+          </div>
+          <div class="form-group">
+            <label for="signup-role">Role (optional)</label>
+            <input
+              id="signup-role"
+              name="role"
+              type="text"
+              placeholder="meteorologist"
+            >
+          </div>
+          <button type="submit">Save Account</button>
+        </form>
+        <p id="signup-message" role="status" aria-live="polite"></p>
+
+        <div class="form-footer">
+          <span class="muted">
+            Accounts are stored locally in your browser and combined with the bundled JSON users.
+          </span>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="button-secondary" data-export-json>
+            Download updated JSON
+          </button>
+          <button type="button" class="button-secondary" data-sync-json hidden>
+            Sync directly to users.json
+          </button>
+          <p class="muted notice">
+            Tip: Use “Download updated JSON” to replace <code>users.json</code> manually if direct sync is unavailable.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Data by
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">
+          Open-Meteo
+        </a>.
+        Built without frameworks.
+      </p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+    <script src="signup.js" defer></script>
+  </body>
+</html>
+
+
+

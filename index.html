@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkyCast | Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="branding">
+          <span class="logo" aria-hidden="true">☀️</span>
+          <h1>SkyCast</h1>
+        </div>
+        <button
+          type="button"
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Toggle color theme"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+          <span class="theme-toggle__label">Dark mode</span>
+        </button>
+      </div>
+      <p class="tagline">Quick forecasts powered by Open-Meteo</p>
+      <nav class="app-nav" aria-label="Primary navigation">
+        <a class="nav-link current" href="index.html" aria-current="page">Forecast</a>
+        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="signup.html">Sign Up</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="help.html">Help</a>
+      </nav>
+    </header>
+
+    <main class="app">
+      <section class="search-card">
+        <form id="search-form" autocomplete="off">
+          <label for="city-input" class="sr-only">City name</label>
+          <input
+            id="city-input"
+            type="text"
+            name="city"
+            placeholder="Search for a city (e.g. London, Tokyo)"
+            required
+          >
+          <div class="input-actions">
+            <button type="submit">Get Forecast</button>
+            <button type="button" id="current-location-btn" class="button-secondary">
+              Use my location
+            </button>
+          </div>
+        </form>
+        <p class="hint">
+          Tip: Try landmarks like "New York" or "Sydney".
+        </p>
+        <p id="status-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="result-section" class="hidden" aria-live="polite">
+        <article class="current-weather card">
+          <h2 id="location-name"></h2>
+          <p class="updated" id="updated-time"></p>
+          <div class="current-details">
+            <div class="primary">
+              <span id="current-temp" class="current-temp"></span>
+              <span id="current-summary" class="summary"></span>
+            </div>
+            <ul class="secondary">
+              <li><strong>Feels like:</strong> <span id="apparent-temp"></span></li>
+              <li><strong>Humidity:</strong> <span id="humidity"></span></li>
+              <li><strong>Wind:</strong> <span id="wind-speed"></span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="forecast card">
+          <h3>5-Day Outlook</h3>
+          <div id="forecast-grid" class="forecast-grid"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Data by
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">
+          Open-Meteo
+        </a>.
+        Built without frameworks.
+      </p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
+
